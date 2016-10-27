@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "dev",
+      "script": "app.js",
+      "instances": 1,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": "3000",
+        "URL_PREFIX": "http://localhost:3000",
+        "API_PREFIX": "http://localhost:3001"
+      },
+      "min_uptime": "60s",
+      "max_restarts": 30,
+      "exec_mode": "cluster_mode",
+      "error_file": "./logs/pm2/test-err.log",
+      "out_file": "./logs/pm2/test-out.log",
+      "pid_file": "./logs/pm2/test.pid",
+      "watch": false
+    }
+  ]
+}
